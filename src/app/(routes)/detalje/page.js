@@ -4,8 +4,17 @@ import { IoIosArrowBack } from "react-icons/io";
 import { FaRegStar } from "react-icons/fa";
 import Info from "@/app/components/Info";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default async function Detalje({ searchParams }) {
+  return (
+    <Suspense>
+      <Filtreringscontainer searchParams={searchParams} />
+    </Suspense>
+  );
+}
+
+async function Filtreringscontainer({ searchParams }) {
   // Henter id fra URL'en — fx /detalje?id=7
   const params = await searchParams;
   const id = params.id;
