@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaRegStar } from "react-icons/fa";
 import { Suspense } from "react";
+import FavoritElement from "@/app/components/FavoritElement";
 
 const petlist = ({ category }) => {
   return (
@@ -39,19 +40,20 @@ const FetchProduct = async ({ category }) => {
             className="rounded-2xl"
           />
         </div>
-
-        <div className="col-start-1 row-start-2 flex justify-between p-2">
-          <div>
-            <h3 className="font-medium">{product.title}</h3>
-            <p className="text-xs text-gray-400">{product.brand}</p>
-            <p className="text-xs text-gray-400">{product.price}</p>
+        <Link href={`/detalje?id=${product.id}`} key={product.id}>
+          <div className="col-start-1 row-start-2 flex justify-between p-2">
+            <div>
+              <h3 className="font-medium">{product.title}</h3>
+              <p className="text-xs text-gray-400">{product.brand}</p>
+              <p className="text-xs text-gray-400">{product.price}</p>
+            </div>
+            <div className="text-xs text-gray-400">
+              <p>rating {product.rating}</p>
+            </div>
           </div>
-          <div className="text-xs text-gray-400">
-            <p>rating {product.rating}</p>
-          </div>
-        </div>
+        </Link>
       </div>
-    </Link>
+    </section>
   ));
 };
 

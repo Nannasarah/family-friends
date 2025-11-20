@@ -1,10 +1,11 @@
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
-import { FaRegStar } from "react-icons/fa";
+
 import Info from "@/app/components/Info";
 import Link from "next/link";
 import { Suspense } from "react";
+import FavoritElement from "@/app/components/FavoritElement";
 
 export default async function Detalje({ searchParams }) {
   return (
@@ -37,7 +38,7 @@ async function Filtreringscontainer({ searchParams }) {
           </div>
           <div>
             <div className="z-5 rounded-full bg-red-300 p-1">
-              <FaRegStar color="white" size={20} />
+              <FavoritElement id={product.id} />
             </div>
           </div>
         </div>
