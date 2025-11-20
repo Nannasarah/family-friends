@@ -6,7 +6,7 @@ import { BsPerson } from "react-icons/bs";
 
 const MenuLinje = () => {
   return (
-    <nav className="fixed right-0 bottom-0 left-0 z-15 flex justify-around bg-red-200/50 py-4 pb-10 backdrop-blur-md">
+    <nav className="fixed right-0 bottom-0 left-0 z-15 flex max-w-[380px] justify-around bg-red-200/50 py-4 pb-10 backdrop-blur-md">
       <LuHouse size={25} color="white" />
       <FaRegStar size={25} color="white" />
       <IoChatbubbleOutline size={25} color="white" />

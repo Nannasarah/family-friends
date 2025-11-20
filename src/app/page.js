@@ -10,7 +10,7 @@ export default function Home({ searchParams }) {
   return (
     <>
       <Header />
-      <section className="flex gap-4 overflow-x-auto p-5">
+      <section className="flex max-w-[380px] gap-4 overflow-x-auto p-5">
         <Filtreringslinje />
       </section>
       <Suspense>
