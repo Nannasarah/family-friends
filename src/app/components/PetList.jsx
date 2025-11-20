@@ -21,11 +21,11 @@ const FetchProduct = async ({ category }) => {
   const response = await fetch(url);
   const { products } = await response.json();
   return products.map((product) => (
-    <Link href={`/detalje?id=${product.id}`} key={product.id}>
+    <section>
       <div className="grid h-auto w-[150px] rounded-2xl shadow-md hover:bg-red-200/30">
         <div className="col-start-1 row-start-1 flex items-start justify-end p-3">
           <div className="z-5 rounded-full bg-red-200 p-1">
-            <FaRegStar color="white" size={16} />
+            <FavoritElement id={product.id} />
           </div>
         </div>
 
